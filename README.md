@@ -236,6 +236,7 @@ TextToImage-API/
 
 ```bash
 git clone https://github.com/iamrudra-narayan/rudra-text-to-image.git
+cd rudra-text-to-image
 ```
 
 ### 2. Install Dependencies
