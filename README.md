@@ -182,3 +182,235 @@ Built with FastAPI and Render.com by Rudra.
 
 For help or issues, feel free to raise an issue on the GitHub repo or contact me.
 Email Id: agentic.rudra@gmail.com
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 🧠 For Your Self, Please Floow this
+**TextToImage API using FastAPI: End-to-End Setup, Deployment, and Testing Guide**
+
+---
+
+## 🌟 Project Title:
+
+**TextToImage API (Built with FastAPI)**
+
+## 📄 Summary:
+
+This project allows you to send a text prompt and get back an AI-generated image using a public free API (no API key required). It's built using FastAPI and deployed on Render.
+
+---
+
+## 🚀 Features:
+
+* Text to image generation using a free model (e.g., HuggingFace model like `stabilityai/stable-diffusion-2`)
+* POST API to send text and get image URL in response
+* Swagger UI (auto-generated docs)
+* Easily deployable to Render
+
+---
+
+## 📚 Technologies Used:
+
+* Python 3.10+
+* FastAPI
+* Uvicorn
+* Requests
+* Render (deployment)
+* GitHub (version control)
+
+---
+
+## 📂 Project Structure:
+
+```
+TextToImage-API/
+├── main.py               # FastAPI app file
+├── requirements.txt      # Dependencies
+└── README.md             # Documentation (this file)
+```
+
+---
+
+## ✅ Setup Guide (Local Development)
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/TextToImage-API.git
+cd TextToImage-API
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the FastAPI Server
+
+```bash
+uvicorn main:app --reload
+```
+
+### 4. Access the API Docs
+
+Go to [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) in your browser to test the API.
+
+---
+
+## 📆 GitHub Repository Setup (from Scratch)
+
+### 1. Create GitHub Account
+
+* Visit: [https://github.com](https://github.com)
+* Sign up with email or Gmail
+* Verify and login
+
+### 2. Create New Repository
+
+* Click on **New** > Name it: `TextToImage-API`
+* Keep it Public, do not initialize with README
+* Copy the repo link (e.g., `https://github.com/yourusername/TextToImage-API.git`)
+
+### 3. Initialize Git & Push Code
+
+```bash
+# Inside your project directory
+git init
+git checkout -b master
+
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/yourusername/TextToImage-API.git
+git push -u origin master
+```
+
+---
+
+## 🌐 Deployment Guide (Render)
+
+### 1. Push Code to GitHub
+
+(Use the steps above)
+
+### 2. Create a Web Service on Render
+
+* Go to [https://render.com](https://render.com)
+* Click **New Web Service**
+* Connect your GitHub repo
+* Select branch and set build & start commands
+
+### 3. Set Render Configuration:
+
+* **Build Command**: *(leave empty)*
+* **Start Command**:
+
+```bash
+uvicorn main:app --host 0.0.0.0 --port 10000
+```
+
+* **Instance Type**: Free
+
+### 4. Deploy
+
+Click **Create Web Service**. Render will build and host your API.
+
+### 5. Test Deployed API
+
+Visit `https://your-app-name.onrender.com/docs` and test your API live.
+
+---
+
+## 👀 Sample API Usage
+
+### Endpoint 1:
+
+`POST /generate-image`
+
+**Description**: Generate a new image based on a given text prompt.
+
+#### ✅ Request Body (JSON):
+
+```json
+{
+  "prompt": "A cyberpunk city at night"
+}
+```
+
+#### 🔁 Response:
+
+```json
+{
+  "image_url": "https://your-app-name.onrender.com/static/output.png"
+}
+```
+
+#### 🧪 CURL Example:
+
+```bash
+curl -X 'POST' \
+  'https://your-app-name.onrender.com/generate-image' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "prompt": "A cyberpunk city at night"
+}'
+```
+
+---
+
+### Endpoint 2:
+
+`GET /`
+
+**Description**: Base route that returns a simple HTML or welcome message (optional).
+
+#### 🔁 Response:
+
+```html
+<html>
+  <body>
+    <h1>Welcome to TextToImage API</h1>
+  </body>
+</html>
+```
+
+#### 🧪 CURL Example:
+
+```bash
+curl https://your-app-name.onrender.com/
+```
+
+---
+
+## 🔗 Useful Links
+
+* FastAPI: [https://fastapi.tiangolo.com/](https://fastapi.tiangolo.com/)
+* Render: [https://render.com/](https://render.com/)
+* GitHub: [https://github.com/](https://github.com/)
+
+---
+
+## 🎥 Ready-to-Use Commands
+
+```bash
+# Clone project
+git clone https://github.com/yourusername/TextToImage-API.git
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run locally
+uvicorn main:app --reload
+
+# GitHub upload setup
+git init
+git checkout -b master
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/yourusername/TextToImage-API.git
+git push -u origin master
+
+# Start command for Render
+uvicorn main:app --host 0.0.0.0 --port 10000
+```
+
