@@ -238,10 +238,10 @@ TextToImage-API/
 git clone https://github.com/iamrudra-narayan/rudra-text-to-image.git
 ```
 ```bash
-python -m venv env
+cd rudra-text-to-image
 ```
 ```bash
-git clone https://github.com/iamrudra-narayan/rudra-text-to-image.git
+python -m venv env
 ```
 ```bash
 .\env\Scripts\activate
