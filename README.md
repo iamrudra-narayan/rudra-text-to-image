@@ -184,7 +184,7 @@ For help or issues, feel free to raise an issue on the GitHub repo or contact me
 Email Id: agentic.rudra@gmail.com
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## 🧠 For Your Self, Please Floow this
+## 🧠 For Your Self, Please Flow this
 **TextToImage API using FastAPI: End-to-End Setup, Deployment, and Testing Guide**
 
 ---
@@ -235,8 +235,7 @@ TextToImage-API/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/TextToImage-API.git
-cd TextToImage-API
+git clone https://github.com/iamrudra-narayan/rudra-text-to-image.git
 ```
 
 ### 2. Install Dependencies
@@ -267,9 +266,8 @@ Go to [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) in your browser t
 
 ### 2. Create New Repository
 
-* Click on **New** > Name it: `TextToImage-API`
+* Click on **New** > Name it: `TextToImageApi`
 * Keep it Public, do not initialize with README
-* Copy the repo link (e.g., `https://github.com/yourusername/TextToImage-API.git`)
 
 ### 3. Initialize Git & Push Code
 
@@ -280,7 +278,7 @@ git checkout -b master
 
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/yourusername/TextToImage-API.git
+git remote add origin https://github.com/iamrudra-narayan/rudra-text-to-image.git
 git push -u origin master
 ```
 
@@ -329,10 +327,35 @@ Visit `https://your-app-name.onrender.com/docs` and test your API live.
 **Description**: Generate a new image based on a given text prompt.
 
 #### ✅ Request Body (JSON):
-
+Authorization_Key : "8c0061b6c4ee7b67f1397444313f70dc259a3b5c"
 ```json
 {
-  "prompt": "A cyberpunk city at night"
+    "highPixels": false,
+    "model_id": "23887bba-507e-4249-a0e3-6951e4027f2b",
+    "prompt": "A man selfie with a lion in jungle",
+    "negative_prompt": "",
+    "resolution": {
+        "width": 1344,
+        "height": 768,
+        "batch_size": 1
+    },
+    "model_ability": {},
+    "seed": 9896923949,
+    "steps": 6,
+    "cfg": 1,
+    "sampler_name": "euler",
+    "scheduler": "normal",
+    "ponyTags": {},
+    "denoise": 1,
+    "hires_fix_denoise": 0.5,
+    "hires_scale": 2,
+    "multi_img2img_info": {
+        "style_list": []
+    },
+    "img_control_info": {
+        "style_list": []
+    },
+    "continueCreate": false
 }
 ```
 
@@ -340,7 +363,14 @@ Visit `https://your-app-name.onrender.com/docs` and test your API live.
 
 ```json
 {
-  "image_url": "https://your-app-name.onrender.com/static/output.png"
+    "status": 0,
+    "message": "success",
+    "data": {
+        "markId": "dca0d07b-41f8-41ec-8b68-0bcb3a843dc4",
+        "featureName": "ttp",
+        "fastHour": true,
+        "index": -1
+    }
 }
 ```
 
@@ -360,18 +390,21 @@ curl -X 'POST' \
 
 ### Endpoint 2:
 
-`GET /`
+`GET check-image /`
 
 **Description**: Base route that returns a simple HTML or welcome message (optional).
 
-#### 🔁 Response:
+#### 🔁 Request:
+```json
+Authorization Key: 8c0061b6c4ee7b67f1397444313f70dc259a3b5c
+mark_id: "03debf7f-9f34-431c-8f94-166ab1bb4f70"
+```
 
-```html
-<html>
-  <body>
-    <h1>Welcome to TextToImage API</h1>
-  </body>
-</html>
+#### 🔁 Response:
+```json
+
+```json
+
 ```
 
 #### 🧪 CURL Example:
